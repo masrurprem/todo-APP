@@ -1,6 +1,7 @@
 # 📝 Todo App
-
 A simple and clean Todo application built using vanilla JavaScript.
+## 🌐 Live Demo
+[View the App Live](https://fastidious-sable-d6492f.netlify.app/)
 
 ## 🚀 Features
 
