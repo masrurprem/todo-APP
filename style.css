@@ -99,6 +99,16 @@ form {
   cursor: pointer;
 }
 
+.edit-button {
+  padding: 3px;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
 .custom-checkbox {
   border: 2px solid var(--accent-color);
   border-radius: 50%;

@@ -62,10 +62,32 @@ function createTodoLi(todo, todoIndex) {
               />
             </svg>
           </button>
+          <button class="edit-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#e3e3e3"
+            >
+              <path
+                d="M160-400v-80h280v80H160Zm0-160v-80h440v80H160Zm0-160v-80h440v80H160Zm360 560v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q8 9 12.5 20t4.5 22q0 11-4 22.5T863-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z"
+              />
+            </svg>
+          </button>
+
+          
           `;
   //delete a todo from list
   const deleteButton = listItem.querySelector(".delete-button");
   deleteButton.addEventListener("click", () => {
+    deleteTodoItem(todoIndex);
+  });
+  //edit todos
+  const editButton = listItem.querySelector(".edit-button");
+  editButton.addEventListener("click", () => {
+    todoInput.value = todoText;
+    todoInput.focus();
     deleteTodoItem(todoIndex);
   });
   //checkbox
@@ -92,7 +114,7 @@ function deleteTodoItem(todoIndex) {
 function saveTodos() {
   const todoString = JSON.stringify(allTodos);
   localStorage.setItem("todos", todoString);
-  //onsole.log("todos has saved", todoString);
+  //console.log("todos has saved", todoString);
 }
 function getTodos() {
   const todoString = localStorage.getItem("todos") || "[]";
