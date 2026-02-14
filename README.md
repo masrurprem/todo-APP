@@ -7,6 +7,7 @@ A simple and clean Todo application built using vanilla JavaScript.
 - ➕ Add new tasks
 - 📋 Display a list of todos
 - ✅ Mark tasks as completed (strike-through effect)
+- edit tasks if needed
 - 🗑 Delete tasks
 - 💾 Persistent storage using Local Storage
 
